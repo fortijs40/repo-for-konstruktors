@@ -90,6 +90,17 @@ def push_asteroids_arrays_to_db(request_day, ast_array, hazardous):
 		else:
 			logger.debug("Asteroid already IN DB")
 
+def check_if_name_more_than_0 (asteroid_array):
+	if len(asteroid_array) > 0:
+		for asteroid in asteroid_array:
+			if len(asteroid[0]) == 0:
+				return []	
+		return asteroid_array
+	else:
+		print("Invalid asteroid name, lenght must be > 0")
+		return []
+
+
 if __name__ == "__main__":
 
 	connection = None
