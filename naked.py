@@ -100,6 +100,11 @@ def check_if_name_more_than_0 (asteroid_array):
 		print("Invalid asteroid name, lenght must be > 0")
 		return []
 
+def detect_for_potential_false_distance(asteroid_array):
+	for asteroid in asteroid_array:
+		if asteroid[8] < 400:
+			return []
+	return asteroid_array
 
 if __name__ == "__main__":
 
