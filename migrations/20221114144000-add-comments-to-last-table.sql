@@ -1,0 +1,1 @@
+ALTER TABLE last_from_ast_daily ADD COLUMN comments varchar(255);
